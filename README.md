@@ -11,3 +11,6 @@ Built on **Microsoft Copilot Studio** and **Azure AI Foundry**,
 the system handles everything from customer intake to inventory 
 checking, logistics planning, pricing optimisation, risk monitoring 
 and final booking confirmation.
+
+ API endpoint URL- 
+ https://mayproject-resource.services.ai.azure.com/api/projects/mayproject/applications/CateringOperator/protocols/activityprotocol?api-version=2025-11-15-preview
