@@ -1,0 +1,244 @@
+kind: workflow
+trigger:
+  kind: OnConversationStart
+  id: trigger_wf
+  actions:
+    - kind: InvokeAzureAgent
+      id: node-1777433318407
+      agent:
+        name: CustomerInteraction
+      conversationId: =System.ConversationId
+      input:
+        messages: ""
+      output:
+        autoSend: true
+    - kind: Question
+      variable: Local.Bookingcheck
+      id: node-1777689717096
+      entity: StringPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: Are you looking to book a catering service?(Yes/No)
+    - kind: ConditionGroup
+      conditions:
+        - condition: =Lower(Local.Bookingcheck) = "yes"
+          actions:
+            - kind: Question
+              variable: Local.Customername
+              id: node-1777689910486
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: What is your name?
+            - kind: Question
+              variable: Local.emailid
+              id: node-1777690129047
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: How can we contact you?(E-mail address)
+            - kind: Question
+              variable: Local.eventtype
+              id: node-1777690188059
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: What type of event is this?(Wedding, Funeral, Birthday)
+          id: if-node-1777689792018-zhn2h9zf
+      id: node-1777689792018
+      elseActions:
+        - kind: GotoAction
+          actionId: node-1777433318407
+          id: node-1777689856800
+    - kind: Question
+      variable: Local.Var5856
+      id: node-1776203341770
+      entity: NumberPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: How many people will be attending?
+    - kind: ConditionGroup
+      conditions:
+        - condition: =Local.Var5856 >= 20
+          actions: []
+          id: if-node-1777517929590-slo1uz44
+      id: node-1777517929590
+      elseActions:
+        - kind: SendActivity
+          activity: I'm sorry, but our minimum order size is 20 guests. Could you please provide a guest count of at least 20?
+          id: node-1777518072554
+        - kind: GotoAction
+          actionId: node-1776203341770
+          id: node-1777518163083
+    - kind: Question
+      variable: Local.Var768
+      id: node-1776203477297
+      entity: DateTimePrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: On which date is the event?(YYYY-MM-DD)
+    - kind: Question
+      variable: Local.Var6619
+      id: node-1777521181570
+      entity: DateTimePrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: Please provide the time of the event(HH:MM)
+    - kind: Question
+      variable: Local.Var2007
+      id: node-1776203545826
+      entity: StringPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: Great!!                               Please share your location(Only in Singapore)
+    - kind: Question
+      variable: Local.Var8194
+      id: node-1776203652075
+      entity: StringPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: "Do you have any dietary needs(eg: Vegetarian/Non-Vegetarian)"
+    - kind: Question
+      variable: Local.Var427
+      id: node-1776203728447
+      entity: StringPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: What type of cuisine do you prefer?(Indian/International)
+    - kind: Question
+      variable: Local.Var1739
+      id: node-1776203793882
+      entity: NumberPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: |-
+        PERFECT!!
+        What is your budget?
+    - kind: Question
+      variable: Local.Var2960
+      id: node-1776203834351
+      entity: StringPrebuiltEntity
+      skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+      prompt: Would you like to see the menu?
+    - kind: ConditionGroup
+      conditions:
+        - condition: =Local.Var2960 = "yes"
+          actions:
+            - kind: InvokeAzureAgent
+              id: node-1775947215364
+              agent:
+                name: MENUPLANNING
+              conversationId: =System.ConversationId
+              input:
+                messages: ""
+              output:
+                autoSend: true
+                responseObject: Local.Var5985
+            - kind: Question
+              variable: Local.Var3784
+              id: node-1777515786276
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: Please let me know if you want to proceed further with the order?(Yes/No)
+            - kind: ConditionGroup
+              conditions:
+                - condition: =Local.Var3784 = "yes"
+                  actions: []
+                  id: if-node-1777515897727-zh1qgs58
+              id: node-1777515897727
+              elseActions:
+                - kind: SendActivity
+                  activity: "Thankyou for catering with us. It was a pleasure to assist you. "
+                  id: node-1777515914820
+                - kind: EndConversation
+                  id: node-1777515971467
+            - kind: Question
+              variable: Local.Appetizerchoice
+              id: node-1776915393476
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: |+
+                
+
+                Please select dishes from the appetizer list(Dish1, Dish2): 
+
+            - kind: Question
+              variable: Local.Mainchoice
+              id: node-1777694373057
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: "Please select dishes from main list(Dish1, Dish2):"
+            - kind: Question
+              variable: Local.dessertchoice
+              id: node-1777694418674
+              entity: StringPrebuiltEntity
+              skipQuestionMode: SkipOnFirstExecutionIfVariableHasValue
+              prompt: "Please select dishes from dessert list(Dish1, Dish2):"
+            - kind: SetVariable
+              id: node-1777695010288
+              variable: Local.fulldishchoice
+              value: = Local.Appetizerchoice & ", " & Local.Mainchoice & ", " & Local.dessertchoice
+            - kind: InvokeAzureAgent
+              id: node-1776912528612
+              agent:
+                name: CalculatedMenuPlanning
+              conversationId: =System.ConversationId
+              input:
+                messages: =Local.fulldishchoice
+              output:
+                autoSend: false
+                responseObject: Local.Var3296
+            - kind: InvokeAzureAgent
+              id: node-1776947727160
+              agent:
+                name: InventoryandProcurment
+              conversationId: =System.ConversationId
+              input:
+                messages: =Local.Var3296
+              output:
+                autoSend: false
+                responseObject: Local.Var3489
+            - kind: InvokeAzureAgent
+              id: node-1777085746643
+              agent:
+                name: LogisticsPlanningAgent
+              conversationId: =System.ConversationId
+              input:
+                messages: =Local.Var3489
+                externalLoop:
+                  when: =
+              output:
+                autoSend: false
+                responseObject: Local.Var9211
+            - kind: InvokeAzureAgent
+              id: node-1777522043122
+              agent:
+                name: PricingandOptimization
+              conversationId: =System.ConversationId
+              input:
+                messages: =Local.Var9211
+              output:
+                autoSend: false
+                responseObject: Local.Var7953
+            - kind: InvokeAzureAgent
+              id: node-1777522313683
+              agent:
+                name: MonitoringAgent
+              conversationId: =System.ConversationId
+              input:
+                messages: =Local.Var7953
+              output:
+                autoSend: false
+                responseObject: Local.Var3205
+            - kind: InvokeAzureAgent
+              id: node-1777617531923
+              agent:
+                name: FinalOutputAgent
+              conversationId: =System.ConversationId
+              input:
+                messages: =Local.Var3205
+              output:
+                autoSend: false
+                responseObject: Local.Var5474
+            - kind: EndConversation
+              id: node-1777430202047
+          id: if-node-1775947156548-3k8gzjan
+      id: node-1775947156548
+      elseActions:
+        - kind: SendActivity
+          activity: Thank you for choosing us for your catering needs. It was a pleasure serving you, and we look forward to working with you again soon.
+          id: node-1775947226825
+        - kind: EndConversation
+          id: node-1776291738533
+id: ""
+name: CateringOperator
+description: ""
