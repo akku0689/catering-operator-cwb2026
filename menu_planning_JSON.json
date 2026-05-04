@@ -1,0 +1,152 @@
+[
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Vegetable Pakora Medley",
+    "category": "Appetizer",
+    "dishDescription": "Assorted seasonal vegetable fritters served with mint chutney.",
+    "pricePerServing": "S$3.50",
+    "portionType": "Per serving",
+    "allergens": "Gluten-Free, Nut-Free",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Chicken 65 Strips",
+    "category": "Appetizer",
+    "dishDescription": "Spiced, deep-fried chicken bites with curry leaves and chili.",
+    "pricePerServing": "S$4.50",
+    "portionType": "Per serving",
+    "allergens": "Contains Egg, Dairy-Free",
+    "dietaryTag": "Non-Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Chicken Dum Biryani",
+    "category": "Main Course",
+    "dishDescription": "Fragrant basmati rice cooked with spiced chicken, served with Raita.",
+    "pricePerServing": "S$11.00",
+    "portionType": "Per pax",
+    "allergens": "Contains Dairy, Nut-Free",
+    "dietaryTag": "Non-Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Mixed Vegetable Curry (Jalfrezi)",
+    "category": "Main Course",
+    "dishDescription": "Stir-fried seasonal vegetables in a tangy tomato and bell pepper sauce.",
+    "pricePerServing": "S$7.50",
+    "portionType": "Per pax",
+    "allergens": "Allergy-Friendly",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Yellow Tadka Dal",
+    "category": "Main Course",
+    "dishDescription": "Yellow lentils tempered with fried garlic, cumin, and dried chilies.",
+    "pricePerServing": "S$6.00",
+    "portionType": "Per pax",
+    "allergens": "Allergy-Friendly",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Steamed Basmati Rice",
+    "category": "Breads & Sides",
+    "dishDescription": "Plain steamed basmati rice.",
+    "pricePerServing": "S$2.50",
+    "portionType": "Per pax",
+    "allergens": "Allergy-Friendly",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Garlic Herb Chapati",
+    "category": "Breads & Sides",
+    "dishDescription": "Soft flatbread with garlic and herb seasoning.",
+    "pricePerServing": "S$2.00",
+    "portionType": "Per pax",
+    "allergens": "Contains Gluten",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Gulab Jamun (2pcs)",
+    "category": "Dessert",
+    "dishDescription": "Soft milk-solid dumplings fried and soaked in a warm rose-infused syrup.",
+    "pricePerServing": "S$4.00",
+    "portionType": "Per portion",
+    "allergens": "Contains Dairy, Gluten",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "Indian Delights",
+    "dishName": "Kesari Bath",
+    "category": "Dessert",
+    "dishDescription": "Traditional aromatic dessert made with semolina, ghee, and real saffron.",
+    "pricePerServing": "S$3.50",
+    "portionType": "Per portion",
+    "allergens": "Contains Dairy, Gluten",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "International",
+    "dishName": "Crispy Vegetable Spring Rolls",
+    "category": "Appetizer",
+    "dishDescription": "Hand-rolled with shredded cabbage and carrots, served with sweet chili sauce.",
+    "pricePerServing": "S$3.00",
+    "portionType": "Per serving",
+    "allergens": "Contains Gluten",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "International",
+    "dishName": "Honey Garlic Chicken Wings",
+    "category": "Appetizer",
+    "dishDescription": "Oven-roasted wings glazed in a savory honey-soy sauce.",
+    "pricePerServing": "S$4.50",
+    "portionType": "Per serving",
+    "allergens": "Contains Soy",
+    "dietaryTag": "Non-Vegetarian"
+  },
+  {
+    "cuisine": "International",
+    "dishName": "Spaghetti Aglio Olio with Mushrooms",
+    "category": "Main Course",
+    "dishDescription": "Classic pasta tossed in olive oil, toasted garlic, and chili flakes.",
+    "pricePerServing": "S$9.00",
+    "portionType": "Per pax",
+    "allergens": "Contains Gluten",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "International",
+    "dishName": "Baked Fish with Lemon Butter Sauce",
+    "category": "Main Course",
+    "dishDescription": "White fish fillets baked until tender and drizzled with a creamy citrus sauce.",
+    "pricePerServing": "S$12.50",
+    "portionType": "Per pax",
+    "allergens": "Contains Fish, Dairy",
+    "dietaryTag": "Non-Vegetarian"
+  },
+  {
+    "cuisine": "International",
+    "dishName": "Garden Green Salad",
+    "category": "Main Course",
+    "dishDescription": "Mixed lettuce with cucumbers, cherry tomatoes, and balsamic vinaigrette.",
+    "pricePerServing": "S$4.50",
+    "portionType": "Per pax",
+    "allergens": "Allergy-Friendly",
+    "dietaryTag": "Vegetarian"
+  },
+  {
+    "cuisine": "International",
+    "dishName": "Chilled Mango Pudding",
+    "category": "Dessert",
+    "dishDescription": "Light and refreshing mango-flavored jelly with fruit bits.",
+    "pricePerServing": "S$3.50",
+    "portionType": "Per portion",
+    "allergens": "Dairy-Free",
+    "dietaryTag": "Vegetarian"
+  }
+]
