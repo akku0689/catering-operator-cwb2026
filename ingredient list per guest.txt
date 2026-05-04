@@ -1,0 +1,67 @@
+{
+  "Vegetable Pakora Medley": {
+    "Mixed vegetables": "80 g",
+    "Gram flour": "40 g",
+    "Oil": "20 ml"
+  },
+  "Chicken 65 Strips": {
+    "Chicken": "120 g",
+    "Flour mix": "30 g",
+    "Oil": "20 ml"
+  },
+  "Chicken Dum Biryani": {
+    "Basmati rice": "120 g",
+    "Chicken": "150 g",
+    "Onions": "40 g",
+    "Tomatoes": "30 g",
+    "Yogurt": "20 g",
+    "Spices": "10 g"
+  },
+  "Mixed Vegetable Curry": {
+    "Mixed vegetables": "150 g",
+    "Onions": "30 g",
+    "Tomatoes": "30 g",
+    "Spices": "10 g"
+  },
+  "Yellow Tadka Dal": {
+    "Yellow lentils": "80 g",
+    "Onions": "20 g",
+    "Tomatoes": "20 g",
+    "Spices": "8 g"
+  },
+  "Gulab Jamun": {
+    "Milk powder": "25 g",
+    "Sugar": "30 g"
+  },
+  "Kesari Bath": {
+    "Semolina": "40 g",
+    "Sugar": "40 g",
+    "Ghee": "10 g"
+  },
+  "Crispy Vegetable Spring Rolls": {
+    "Vegetables": "60 g",
+    "Wrapper": "1 pc",
+    "Oil": "10 ml"
+  },
+  "Honey Garlic Chicken Wings": {
+    "Chicken wings": "120 g",
+    "Honey": "10 g",
+    "Soy sauce": "5 ml"
+  },
+  "Spaghetti Aglio Olio with Mushrooms": {
+    "Spaghetti": "100 g",
+    "Olive oil": "10 ml",
+    "Garlic": "5 g",
+    "Mushrooms": "30 g"
+  },
+  "Baked Fish with Lemon Butter Sauce": {
+    "Fish": "150 g",
+    "Butter": "10 g",
+    "Lemon juice": "5 ml"
+  },
+  "Chilled Mango Pudding": {
+    "Mango puree": "80 g",
+    "Sugar": "20 g",
+    "Gelatin": "5 g"
+  }
+}
