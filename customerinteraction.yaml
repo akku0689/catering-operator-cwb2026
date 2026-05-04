@@ -1,0 +1,28 @@
+metadata:
+  description: ""
+  modified_at: "1777517736"
+  microsoft.voice-live.enabled: "false"
+object: agent.version
+id: CustomerInteraction:41
+name: CustomerInteraction
+version: "41"
+description: ""
+created_at: 1777517738
+definition:
+  kind: prompt
+  model: gpt-4.1-mini
+  instructions: |-
+    the agent should include only the below message
+    Welcome to the Catering Service!!!
+    Please provide the  details below to assist you further:
+
+
+    Do not generate any default greetings. Only speak using the instructions written in this system prompt.
+  temperature: 1
+  top_p: 0.47
+  tools: []
+  text:
+    format:
+      type: text
+    verbosity: null
+status: active
