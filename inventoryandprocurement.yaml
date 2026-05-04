@@ -1,0 +1,41 @@
+metadata:
+  logo: Avatar_Default.svg
+  description: ""
+  modified_at: "1777617074"
+  microsoft.voice-live.enabled: "false"
+object: agent.version
+id: InventoryandProcurment:4
+name: InventoryandProcurment
+version: "4"
+description: ""
+created_at: 1777617076
+definition:
+  kind: prompt
+  model: gpt-4.1
+  instructions: |-
+    
+
+    “Use the ingredient list per guest file to calculate required quantities.”
+
+    “Use the ingredient list file to determine shortages.”
+    calculate the shortages by reducing the ingredient list per guest file from ingredient list
+
+    You run silently in the backend. 
+    Do not ask the user questions.
+    Do not display anything to the customer.
+    Only return structured JSON to the next node.
+  tools:
+    - type: web_search
+    - type: file_search
+      vector_store_ids:
+        - vs_IVXrCuU0k50imBghfoS7krGr
+status: active
+instance_identity:
+  principal_id: 3dd0b2b6-d02d-4f0a-a04c-abad0b4a1dde
+  client_id: 3dd0b2b6-d02d-4f0a-a04c-abad0b4a1dde
+blueprint:
+  principal_id: 45638881-4bcc-42eb-9565-c1363ed65cb5
+  client_id: 45638881-4bcc-42eb-9565-c1363ed65cb5
+blueprint_reference:
+  type: ManagedAgentIdentityBlueprint
+  blueprint_id: InventoryandProcurment-61891
