@@ -1,4 +1,4 @@
-# catering-operator-cwb2026
+# Catering-Operator-CWB2026
 AI-Powered Multi-Agent Catering System - CWB Hackathon 2026
 ## Overview
 CateringOperator is an AI-powered multi-agent catering management 
